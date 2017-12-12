@@ -1,0 +1,57 @@
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-light bg-secondary">
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <div class="col-5">
+        <div class="row">
+          <div class="col-4 text-white">
+            <div class="" style="padding-top: 12px;">
+              <label for="first_name">Requirements</label>
+            </div>
+          </div>
+          <div class="col-8" style="padding-top: 8px;" >
+            <fieldset class="form-group">
+              <!--<select class="form-control" id="sel1">
+                <option>Show All</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>-->
+              <select class="custom-select" [(ngModel)]="displayMonths">
+                <option [ngValue]="1">One month</option>
+                <option [ngValue]="2">Two months</option>
+                <option [ngValue]="3">Three months</option>
+              </select>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-7">
+        <form class="navbar-form navbar-left">
+          <ul class="navbar-nav mr-auto" style="padding-top: 0px;" >
+            <li class="divider-vertical"></li>
+            <li class="nav-item" *ngFor="let module of modules">
+              <a class="nav-link"
+                 [class.active]="module.key == selectedModule"
+                 (click)="onChangeModule(module.key)">
+                <div *ngIf="module.key == '/root'">
+                  <label class="form-check-label text-white">
+                    <input type="checkbox" class="form-check-input" value="" hidden>{{module.value}}
+                  </label>
+                </div>
+
+                <div *ngIf="module.key != '/root'">
+                  <label class="form-check-label text-white">
+                    <input type="checkbox" class="form-check-input" value="">{{module.value}}
+                  </label>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+    
+  </nav>
+</div>
+

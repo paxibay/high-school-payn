@@ -1,0 +1,8 @@
+<button type="button"
+        class="btn btn-outline-secondary"
+        ngbTooltip="{{tooltip}}"
+        triggers="click:blur"
+        #t="ngbTooltip"
+        (click)="isOpen ? t.open() : t.close()">
+  {{buttonLabel}}
+</button>

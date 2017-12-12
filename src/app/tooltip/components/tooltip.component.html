@@ -1,0 +1,15 @@
+<br /><br />
+<div class="container">
+  <tooltip-button [tooltip]="firstButton + 'tooltip message'"
+                  [buttonLabel]="'Click ' + firstButton + 'to open a tooltip'"
+                  [isOpen]="isOpen"
+                  (mouseenter)="mouseEnter()"
+                  (mouseleave)="mouseLeave()">
+  </tooltip-button>
+  <tooltip-button [tooltip]="secondButton + 'tooltip message'"
+                  [buttonLabel]="'Click ' + secondButton + 'to open a tooltip'"
+                  [isOpen]="isOpen"
+                  (mouseenter)="mouseEnter()"
+                  (mouseleave)="mouseLeave()">
+  </tooltip-button>
+</div>
